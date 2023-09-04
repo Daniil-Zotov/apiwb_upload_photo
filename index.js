@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require("fs");
 const FormData = require('form-data');
 
-let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NJRCI6IjU0MTFjN2MxLTc0NzktNGRjZS1hZGIwLWMzZDcxN2E2MDA0MiJ9.Lex2h3Hjxzz6Hf61HB0iyhBl0xzyb9AYQILsLRqczfA"
+let token = fs.readFileSync("./token.txt",{ encoding: 'utf8', flag: 'r' })
 
 async function uploadFile(XVendorCode,formData) {
   try {
@@ -46,7 +46,7 @@ async function dooo () {
 }
 }
 
-dooo ()
+// dooo ()
 
 
 
